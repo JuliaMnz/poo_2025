@@ -22,4 +22,14 @@ public class contaBancaria {
             saldo += valor;
         }
     }
+
+    public double getSaldo() {
+        return saldo;        
+    }
+
+    public void mostrarDados() {
+        System.out.println("Cliente: " + cliente);
+        System.out.println("Conta: " + num_conta);
+        System.out.println("Saldo: " + saldo);
+    }
 }
