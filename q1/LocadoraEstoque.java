@@ -1,5 +1,3 @@
-
-
 public class LocadoraEstoque {
     public static void main(String[] args) {
         Locadora locadora = new Locadora("CineTop");

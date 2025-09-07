@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 
 public class Locadora {
@@ -17,8 +15,8 @@ public class Locadora {
 
     public void listarFilmes() {
         System.out.println("Filmes da locadora " + nome + ":");
-        for (Filme f : filmes) {
-            System.out.println(f);
+        for (Filme j : filmes) {
+            System.out.println(j);
         }
     }
 }
