@@ -1,4 +1,4 @@
-package AtividadePlimorfismo;
+package AtividadePolimorfismo;
 
 public class Animal {
     public void fazerSom() {

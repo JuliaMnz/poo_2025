@@ -1,4 +1,4 @@
-package q2;
+package Lista01.q2;
 
 public class Cliente {
     String nome;
