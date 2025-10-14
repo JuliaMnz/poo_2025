@@ -11,16 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.UserModel;
 import com.example.demo.service.UserService;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 @RestController
 @RequestMapping("/api/v1/users")
 public class UserController {
-    
+
     @Autowired
     UserService userService;
 
     @GetMapping("/getAllUsers")
-    public List<UserModel> getAllUsers(){
+    public List<UserModel> getAllUSers(){
         return userService.getAllUsers();
     }
 
@@ -28,9 +31,9 @@ public class UserController {
     public UserModel addNewUser(@RequestBody UserModel newUser){
         return userService.createUser(newUser);
     }
-
-    @GetMapping("hello/")
-    public String helloword() {
-        return "Hello Word!!";
+    
+    @GetMapping("/hello")
+    public String helloWorld(){
+        return "Hello World!!!";
     }
 }

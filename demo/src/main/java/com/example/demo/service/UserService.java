@@ -14,11 +14,29 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public List<UserModel>getAllUsers(){
+    public List<UserModel> getAllUsers(){
         return userRepository.findAll();
     }
-
-    public UserModel createUser(UserModel user) {
-        return userRepository.save(user);
+    
+    public UserModel getUserById(Long id){
+        UserModel client = userRepository.findById(id).get();
+        return client;
     }
+
+    public UserModel createUser(UserModel client){
+        return userRepository.save(client);
+    }
+
+    public UserModel updateUser(Long id, UserModel product) {
+        if (userRepository.existsById(id)) {
+            product.setId(id);
+            return userRepository.save(product);
+        }
+        return null;
+    }
+
+    public void deleteUser(Long id){
+        userRepository.deleteById(id);
+    }
+
 }
